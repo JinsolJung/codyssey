@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>개발 워크스테이션 실습</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f4f3ef; color: #182c28; font: 17px/1.7 system-ui, sans-serif; }
+    main { max-width: 760px; margin: 10vh auto; padding: 32px; }
+    .label { color: #526a60; font-size: 13px; letter-spacing: .15em; }
+    h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.2; }
+    section { border-top: 1px solid #b9c9bf; padding: 20px 0; }
+    code { background: #e1e8df; padding: 3px 7px; border-radius: 4px; }
+    a { color: #17604d; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="label">CODYSSEY / WORKSTATION LAB</p>
+    <h1>같은 코드, 같은 실행 환경.</h1>
+    <p>직접 만든 NGINX 이미지로 실행한 개발 워크스테이션입니다.</p>
+    <section><h2>01 · 포트 연결</h2><p>호스트 포트를 컨테이너의 8080 포트에 연결했습니다. <a href="/health">서버 상태 확인</a></p></section>
+    <section><h2>02 · 변경 반영</h2><p>바인드 마운트로 호스트 파일의 변경을 즉시 확인합니다.</p><p id="mount-marker">mount-before</p></section>
+    <section><h2>03 · 데이터 유지</h2><p>이름 있는 Docker 볼륨은 컨테이너를 삭제하고 다시 만들어도 데이터를 유지합니다.</p></section>
+  </main>
+</body>
+</html>
